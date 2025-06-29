@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 55px;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: oklch(.205 0 0);
+    margin: 0 20px;
+    padding: 0;
+    color: white;
+}
+
+
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 1em 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 10px red;
+    margin: 1em 10px 0 10px;
+    flex-wrap: wrap;
+}
+.header img {
+    margin-right: 10px;
+}
+.header span {
+    font-size: 30px;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5em 0;
+    font-size: 1rem;
+}
+.box {
+    cursor: pointer;
+    margin: 0 10px;
+    transition: color 0.5s ease;
+}
+.box:hover {
+    color: red;
+    text-shadow: 0 0 10px rgb(2, 1, 0);
+}
+
+/* Hero */
+.headline-wrap {
+    font-size: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.hero-text {
+    text-align: center;
+    font-size: 45px;
+}
+
+/* Team Cards */
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.team-card {
+    background-color: #1a1a1a;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 0 10px red;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ff4f4f;
+}
+.profile-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.team-card h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: white;
+}
+.team-card p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Forms */
+input,
+textarea,
+button {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    font-family: 'Orbitron', sans-serif;
+}
+input,
+textarea {
+    background: #222;
+    color: red;
+}
+button {
+    background: linear-gradient(to right, red, rgb(79, 79, 79));
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px red, 0 0 20px #f0f;
+}
+.cad-box {
+    background: #111;
+    border: 2px solid red;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px red, 0 0 40px #0ff10;
+}
+
+/* Leaderboard */
+#leaderboard li {
+    background: #2a2a2a;
+    margin: 8px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px red;
+    list-style: none;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#home {
+    min-height: 69vh;
+}
+
+/* ... (keep all existing styles unchanged above) ... */
+#chitra {
+    background-image: url('chitralogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 60px 20px 40px 20px;
+    min-height: 60vh;
+}
+#about {
+    background-image: url('chitrabotf.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 60px 20px 40px 20px;
+    min-height: 60vh;
+}
+
+/* ... (rest of your CSS remains unchanged) ... */
+.r-expand {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1ch;
+    transition: width 0.5s ease;
+    vertical-align: bottom;
+}
+.r-expand::after {
+    content: "obotics";
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-left: 0.2ch;
+}
+.r-expand:hover {
+    width: 9ch;
+}
+.r-expand:hover::after {
+    opacity: 1;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .header span {
+        margin-left: 0 !important;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2e2e2e;
+        padding: 10px;
+        border-top: 1px solid red;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+    
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-card {
+        width: 90%;
+    }
+    
+    .cad-box {
+        width: 90%;
+        margin: auto;
+    }
+    
+    input,
+    textarea,
+    button {
+        width: 100% !important;
+    }
+}
+main {
+    margin: 0 20px;
+}
